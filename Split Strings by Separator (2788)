@@ -1,3 +1,26 @@
-#H1 Given an array of strings words and a character separator, split each string in words by separator. #H1
-```markdown
-<p style="color:red;">This is a red paragraph.</p>
+Given an array of strings words and a character separator, split each string in words by separator.
+
+class Solution {
+public:
+    vector<string> splitWordsBySeparator(vector<string>& words, char separator) {
+        
+        // Ensure null-terminated delimiter string
+        const char delimeter[2] = {separator,'\0'};
+        vector<string> word;
+        for(int i=0;i<words.size();i++)
+        {
+            char *ch = new char[words[i].length() + 1];
+            //char* strcpy(char *destination, const char *source);
+            strcpy(ch , words[i].c_str()); // .c_str() converts string to const char * format
+
+            //char* strtok(char* str, const char* delimiters);
+            char *token = strtok(ch,delimeter);
+            while(token!= nullptr)
+            {
+                word.push_back(token);
+                token = strtok(nullptr , delimeter);
+            }
+        }
+        return word;
+    }
+};
