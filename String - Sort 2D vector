@@ -1,0 +1,6 @@
+Sorting 2D vector based on first element of each rows
+vector<vector<int>> points;
+sort(points.begin() , points.end(),
+        [](const auto& a , const auto& b){
+            return a[0]<b[0];
+        });
