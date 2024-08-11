@@ -10,3 +10,10 @@ sort(points.begin() , points.end(),
         [](const auto& a , const auto& b){
             return a[1]<b[1];
         });
+
+Sorting map based on key 
+
+unordered_map<int,string> mp ;
+map<int,string , greater<int>> sorted_map(mp.begin() , mp.end());.............(DESCENDING ORDER)
+
+map<int,string> sorted_map(mp.begin() , mp.end());.............(ASCENDING ORDER)
