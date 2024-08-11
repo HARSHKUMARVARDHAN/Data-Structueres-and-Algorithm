@@ -4,3 +4,9 @@ sort(points.begin() , points.end(),
         [](const auto& a , const auto& b){
             return a[0]<b[0];
         });
+
+Sorting 2D vector based on second element of each rows
+sort(points.begin() , points.end(),
+        [](const auto& a , const auto& b){
+            return a[1]<b[1];
+        });
