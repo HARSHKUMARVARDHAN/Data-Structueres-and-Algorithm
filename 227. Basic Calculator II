@@ -1,0 +1,55 @@
+Example 1:
+ex
+Input: s = "3+2*2"
+Output: 7
+Example 2:
+
+Input: s = " 3/2 "
+Output: 1
+
+
+class Solution {
+public:
+    int calculate(string s) {
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
+        int cur = 0;
+        int prev = 0;
+        int res = 0;
+        int i = 0;
+        char cur_op = '+';
+        while ( i < s.length() ){
+            if(isdigit(s[i])){
+                while((isdigit(s[i])) && (i < s.length())){
+                    cur = cur*10 + (s[i] - '0');
+                    i++;
+                }
+                i--;
+                if(cur_op == '+'){
+                    res += cur;
+                    prev = cur;
+                }
+                else if (cur_op == '-'){
+                    res -= cur;
+                    prev = -cur;
+                }
+                else if(cur_op == '*'){
+                    res -= prev;
+                    res += cur * prev;
+                    prev = cur * prev;
+                }
+                else{
+                    res -= prev;
+                    res += int(prev/cur);
+                    prev = int(prev/cur);
+                }
+                cur = 0;
+            }
+            else if(s[i] != ' '){
+                cur_op = s[i];
+            }
+            i++;
+        }
+        return res;
+    }
+};
