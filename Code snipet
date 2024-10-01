@@ -1,0 +1,1 @@
+##Convert ascii value to english character##  static_cast<char>( ascii value );
