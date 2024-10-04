@@ -1,2 +1,3 @@
-##Convert ascii value to english character## char c = static_cast<char>( ascii value );
+##CONVERT ASCII VALUE TO ENGLISH LETTER ## char c = static_cast<char>( ascii value );
 # include <cmath>  .... ceil(2.2) GIVES 3 AND round(2.2) GIVES 2
+# CANT ACCESS ELEMENTS OF MAP USING INDEX , for(auto &pair : mp){vec.push_back(pair.first);}
