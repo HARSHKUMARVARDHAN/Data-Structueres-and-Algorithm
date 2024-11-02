@@ -1,0 +1,21 @@
+LINK : https://www.naukri.com/code360/problems/upside-down-binary-tree_1281853?leftPanelTabValue=PROBLEM
+
+QUESTION
+
+You are given a rooted binary tree. In this binary tree, all the right nodes are either a leaf node with a sibling (left node sharing the same parent node) or empty.
+Your task is to flip this tree upside down such that all right nodes turn into left leaf nodes.
+You are given the 'ROOT' of the binary tree. Your task is to return the new 'ROOT' after turning the tree upside down.
+
+SOLUTION:
+
+TreeNode<int>* flipTree(TreeNode<int> *root){
+    if(root == NULL || root->left == NULL) return root;
+
+    TreeNode<int>* head = flipTree(root->left);
+    root->left->left = root->right;
+    root->left->right = root;
+
+    root->left = NULL;
+    root->right = NULL;
+    return head;
+}
