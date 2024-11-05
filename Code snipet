@@ -2,3 +2,4 @@
 # include <cmath>  .... ceil(2.2) GIVES 3 AND round(2.2) GIVES 2
 # CANT ACCESS ELEMENTS OF MAP USING INDEX , for(auto &pair : mp){vec.push_back(pair.first);}
 # ACCESS LAST BIT OF INTEGER .... n = n&1
+# Convert char to string .... string(1, s[i]));
