@@ -3,3 +3,6 @@
 # CANT ACCESS ELEMENTS OF MAP USING INDEX , for(auto &pair : mp){vec.push_back(pair.first);}
 # ACCESS LAST BIT OF INTEGER .... n = n&1
 # Convert char to string .... string(1, s[i]));
+# remove part of string ..... str.erase(index , length)
+# remove particular index element from vector ........ vec.erase(vec.begin() + index);
+# insert new vector from index2 of vec2 at particular index1 in vec.....vec.insert(vec.begin()+index1,vec2.begin()+index2 , vec2.end()) 
