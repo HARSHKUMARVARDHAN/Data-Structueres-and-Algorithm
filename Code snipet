@@ -8,3 +8,13 @@
 # insert new vector from index2 of vec2 at particular index1 in vec.....vec.insert(vec.begin()+index1,vec2.begin()+index2 , vec2.end()) 
 # count number of set bits ........int setBitCount = __builtin_popcount(nums[i]);
 # want only last n bits then masking .......int mask = (1<<bitNeeded) -1; (num & mask);
+# for 1e4 vector is better option for TC for using find() -->
+{
+  map<int,bool> mp;
+          for(auto i:banned){mp[i]=true;}
+  if( !mp[i])
+  
+  vector<bool> v(1e4+1,false);
+          for(auto i:banned){v[i]=true;}
+  if(!v[i])
+}
